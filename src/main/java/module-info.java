@@ -1,6 +1,8 @@
 module es.juliogtrenard.jasperagenda {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires net.sf.jasperreports.core;
 
 
     opens es.juliogtrenard.jasperagenda to javafx.fxml;
