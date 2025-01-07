@@ -45,7 +45,7 @@ public class AgendaController {
     @FXML
     void aceptar(ActionEvent event) {
         if (rbInforme1.isSelected()) {
-            lanzarInformePersonas("InformePersonas1");
+            lanzarInformePersonas("InformePersonas");
         } else if (rbInforme2.isSelected()) {
             lanzarInformePersonas("InformePersonas2");
         } else {
