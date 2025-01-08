@@ -49,7 +49,7 @@ public class AgendaController {
         } else if (rbInforme2.isSelected()) {
             lanzarInformePersonas("InformePersonas2");
         } else {
-            lanzarSubinforme();
+            lanzarSubinforme("InformePersonas3");
         }
     }
 
@@ -101,7 +101,7 @@ public class AgendaController {
     /**
      * Función que carga y lanza el informe de JasperReport
      */
-    public void lanzarSubinforme() {
+    public void lanzarSubinforme(String informe) {
         DBConnect connection;
         try {
             connection = new DBConnect();
@@ -113,7 +113,7 @@ public class AgendaController {
             parameters.put("TELEFONOS", DaoTelefono.todosTelefonos());
 
             // Obtiene el informe
-            JasperReport report = (JasperReport) JRLoader.loadObject(AgendaApplication.class.getResource("reports/InformePersonas3.jasper"));
+            JasperReport report = (JasperReport) JRLoader.loadObject(AgendaApplication.class.getResource("reports/" + informe + ".jasper"));
 
             // Carga el informe
             JasperPrint jprint = JasperFillManager.fillReport(report, parameters, connection.getConnection());
