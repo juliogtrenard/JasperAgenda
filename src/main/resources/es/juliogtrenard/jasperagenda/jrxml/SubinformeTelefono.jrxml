@@ -1,0 +1,46 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="SubinformeTelefono" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac66dfaf-589f-49a6-b9cd-4f3ce78bbcb6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<parameter name="dni" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[select telefono from agenda.telefono]]></query>
+	<field name="telefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="telefono"/>
+		<property name="com.jaspersoft.studio.field.label" value="telefono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="telefono"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="1" splitType="Stretch">
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="85a61ece-3e61-4eaf-99f3-17b718240f30" mode="Opaque" x="-20" y="0" width="230" height="61" forecolor="#16748A" backcolor="#C4C4C4" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
+			<printWhenExpression><![CDATA[$F{telefono}!=null]]></printWhenExpression>
+			<text><![CDATA[TELEFONO]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<element kind="line" uuid="a9f1a868-3081-49f5-8d0d-fb1d0e7dc13f" x="-20" y="20" width="230" height="1">
+				<printWhenExpression><![CDATA[$F{telefono}!=null]]></printWhenExpression>
+			</element>
+			<element kind="textField" uuid="ea5b72d3-7a76-464c-80c8-5cb0c7a40289" x="-20" y="1" width="230" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<printWhenExpression><![CDATA[$F{telefono}!=null]]></printWhenExpression>
+				<expression><![CDATA[$F{telefono}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d739fb3-a7c1-4c92-a970-8b5fce5e3488"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+	<columnFooter height="1" splitType="Stretch">
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</columnFooter>
+	<pageFooter height="1" splitType="Stretch">
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</pageFooter>
+	<summary height="1" splitType="Stretch">
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</summary>
+</jasperReport>
